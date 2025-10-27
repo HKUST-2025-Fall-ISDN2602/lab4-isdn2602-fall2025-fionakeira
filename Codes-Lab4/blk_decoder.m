@@ -28,20 +28,15 @@ msgblk = codeword(1:4);
 % % There are four possible one bit errors in the message block
 % 
 % % Modify the code below
-if (S(1)==1)
-   msgblk(1)=not(msgblk(1));%when one bit error is in msgblk(1)
-elseif (S(2)==1)
-   msgblk(2)=not(msgblk(2));%when one bit error is in msgblk(2)
-elseif (S(3)==1)
-   msgblk(3)=not(msgblk(3));%when one bit error is in msgblk(3)
-elseif (S(4)==1)
-   msgblk(4)=not(msgblk(4));%when one bit error is in msgblk(4)
+if isequal(S, [1 0 1 0])
+        msgblk(1) = ~msgblk(1); % D1
+    elseif isequal(S, [1 0 0 1])
+        msgblk(2) = ~msgblk(2); % D2
+    elseif isequal(S, [0 1 1 0])
+        msgblk(3) = ~msgblk(3); % D3
+    elseif isequal(S, [0 1 0 1])
+        msgblk(4) = ~msgblk(4); % D4
+    end
+
+    % If only one syndrome bit is 1 → parity bit error, no correction needed for msgblk
 end
-
-
-
-
-
-
-
-
