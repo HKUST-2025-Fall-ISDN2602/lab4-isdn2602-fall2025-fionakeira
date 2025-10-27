@@ -30,8 +30,18 @@ title('Histogram of the runs from 0 to 9 and >= 10');
 
 
      % % % % Revise the following code to generate a valid  and efficient dictionary   % % % %  
-     dict = {[0 0 0 0], [0 0 0 1], [0 0 1 0], [0 0 1 1], [0 1 0 0],...
-         [0 1 0 1], [0 1 1 0], [0 1 1 1], [1 0 0 0], [1 0 0 1],[1 0 1 0]};
+dict = {
+    [1 1 0 1 0 0 1 1], ...  % symbol 1  (p=0.0092)
+    [0],                 ... % symbol 2  (p=0.3870)
+    [1 1 1],            ...  % symbol 3  (p=0.1911)
+    [1 0 1],            ...  % symbol 4  (p=0.1294)
+    [1 0 0],            ...  % symbol 5  (p=0.1162)
+    [1 1 0 0 1],        ...  % symbol 6  (p=0.0461)
+    [1 1 0 1 0 1],      ...  % symbol 7  (p=0.0232)
+    [1 1 0 0 0],        ...  % symbol 8  (p=0.0274)
+    [1 1 0 1 0 0 0],    ...  % symbol 9  (p=0.0099)
+    [1 1 0 1 0 0 1 0],  ...  % symbol 10 (p=0.0040)
+    [1 1 0 1 1]}
        
     % % % % Do not change the code below % % % %  
 
